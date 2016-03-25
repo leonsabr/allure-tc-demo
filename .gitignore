@@ -1,0 +1,4 @@
+.idea/
+allure-tc-demo.iml
+target/
+*.DS_Store
