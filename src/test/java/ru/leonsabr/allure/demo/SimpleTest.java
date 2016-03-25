@@ -13,7 +13,7 @@ import java.io.IOException;
 @Title("Some tests for demo purposes")
 public class SimpleTest {
 
-    private static long version = 0L;
+    private static long version = 1L;
 
     @Title("Basic authentication test")
     @Test
@@ -34,17 +34,14 @@ public class SimpleTest {
 
     @Step("Type username '{0}'")
     public void typeUsername(String username) {
-        System.out.println(username);
     }
 
     @Step("Type password '{0}'")
     public void typePassword(String password) {
-        System.out.println(password);
     }
 
     @Step("Submit Login form")
     public void step2() {
-        System.out.println("submit");
     }
 
     @Step("Check authentication state")
