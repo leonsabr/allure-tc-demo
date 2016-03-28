@@ -20,7 +20,7 @@ public class SimpleTest {
     @Title("Example of failed test")
     @Test
     public void failed() {
-        fail("This is failed test");
+        //fail("This is failed test");
     }
 
     @Title("Basic authentication test")
@@ -40,11 +40,11 @@ public class SimpleTest {
         typePassword("123456");
     }
 
-    @Step("Type username '{0}'")
+    @Step("Type username {0}")
     public void typeUsername(String username) {
     }
 
-    @Step("Type password '{0}'")
+    @Step("Type password {0}")
     public void typePassword(String password) {
     }
 
@@ -54,7 +54,7 @@ public class SimpleTest {
 
     @Step("Check authentication state")
     public void authentication() throws IOException {
-        attach("Header", IOUtils.toByteArray(getClass().getClassLoader().getResourceAsStream("screen.png")));
+        attach("some image", IOUtils.toByteArray(getClass().getClassLoader().getResourceAsStream("screen.png")));
     }
 
     @Attachment(value = "{0}", type = "image/png")
