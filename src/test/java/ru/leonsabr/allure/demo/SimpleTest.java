@@ -10,10 +10,18 @@ import ru.yandex.qatools.allure.events.AddParameterEvent;
 
 import java.io.IOException;
 
+import static org.junit.Assert.*;
+
 @Title("Some tests for demo purposes")
 public class SimpleTest {
 
     private static long version = 1L;
+
+    @Title("Example of failed test")
+    @Test
+    public void failed() {
+        fail("This is failed test");
+    }
 
     @Title("Basic authentication test")
     @Test
